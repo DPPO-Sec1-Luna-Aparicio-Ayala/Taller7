@@ -22,9 +22,15 @@ class AlmacenTest {
 	}
 	
 	@Test
+	void TestMetodo1()
+	{
+		assertEquals("Respuesta 1", this.almacen.metodo1());
+	}
+	
+	@Test
 	void TestDarCategoriaRaiz()
 	{
-		assertEquals("Cupi2",this.almacen.darCategoriaRaiz().buscarNodo("1").darNombre());
+		assertEquals("Tecnología",this.almacen.darCategoriaRaiz().buscarNodo("11").darNombre());
 	}
 
 }
