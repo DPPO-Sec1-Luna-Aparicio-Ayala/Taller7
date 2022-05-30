@@ -29,6 +29,17 @@ class AlmacenTest {
 	}
 	
 	@Test
+	void TestCargar () throws AlmacenException
+	{
+		try {
+			Almacen prueba = new Almacen(new File("data/datos.txt"));
+			assertNotNull(this.almacen, "No deberia de ser null");
+		} catch (AlmacenException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	@Test
 	void TestMetodo1()
 	{
 		assertEquals("Respuesta 1", this.almacen.metodo1());
