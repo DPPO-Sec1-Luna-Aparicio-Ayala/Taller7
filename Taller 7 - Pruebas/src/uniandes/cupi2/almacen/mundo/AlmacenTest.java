@@ -21,6 +21,13 @@ class AlmacenTest {
 		this.almacen = new Almacen(new File("data/datos.txt"));
 	}
 	
+	
+	@Test
+	void TestDarCategoriaRaiz()
+	{
+		assertEquals("Tecnología",this.almacen.darCategoriaRaiz().buscarNodo("11").darNombre());
+	}
+	
 	@Test
 	void TestMetodo1()
 	{
@@ -28,9 +35,10 @@ class AlmacenTest {
 	}
 	
 	@Test
-	void TestDarCategoriaRaiz()
+	void TestMetodo2()
 	{
-		assertEquals("Tecnología",this.almacen.darCategoriaRaiz().buscarNodo("11").darNombre());
+		assertEquals("Respuesta 2", this.almacen.metodo2());
 	}
+	
 
 }
